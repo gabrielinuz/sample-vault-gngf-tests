@@ -26,7 +26,7 @@ testUtils.createTestButton("Test Login - Password Incorrecto (Pepe y 123)", asyn
     const data = await response.json();
     testUtils.log(data);
 
-    if (response.ok) {
+    if (response.status === 401) {
         testUtils.setSuccess(btn);
     }
 });
